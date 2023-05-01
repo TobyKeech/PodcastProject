@@ -1,26 +1,23 @@
 import { gql, GraphQLClient } from "graphql-request";
 
 const makeGQLRequest = async (query) => {
-    const apiKey = process.env.REACT_APP_KEY
-    const userId = process.env.REACT_APP_USER_ID
-    const endpoint = `https://api.taddy.org`;
+  const apiKey = process.env.REACT_APP_KEY;
+  const userId = process.env.REACT_APP_USER_ID;
+  const endpoint = `https://api.taddy.org`;
 
-    const graphQLClient = new GraphQLClient(endpoint, {
-        headers: {
-            "X-USER-ID": userId,
-            "X-API-KEY": apiKey,
-        },
-    });
+  const graphQLClient = new GraphQLClient(endpoint, {
+    headers: {
+      "X-USER-ID": userId,
+      "X-API-KEY": apiKey,
+    },
+  });
 
-    const data = await graphQLClient.request(query);
-    return data
-}
+  const data = await graphQLClient.request(query);
+  return data;
+};
 
 export const getPodSeries = async (uuid) => {
-
-    
-
-    const query = gql`
+  const query = gql`
         {
             getPodcastSeries(uuid: "${uuid}") {
                 uuid
@@ -37,17 +34,14 @@ export const getPodSeries = async (uuid) => {
         }
     `;
 
-    console.log(uuid)
-    
-    const data = await makeGQLRequest(query)
-    return data.getPodcastSeries
-}
+  // console.log(uuid)
+
+  const data = await makeGQLRequest(query);
+  return data.getPodcastSeries;
+};
 
 export const getPodcastSearch = async (searchText) => {
-
-    
-
-    const query = gql`
+  const query = gql`
         {
             searchForTerm(term:"${searchText}", filterForTypes:PODCASTSERIES, searchResultsBoostType:BOOST_POPULARITY_A_LITTLE){
                 searchId
@@ -59,8 +53,8 @@ export const getPodcastSearch = async (searchText) => {
                 }
             }
         }
-    `
+    `;
 
-    const data = await makeGQLRequest(query)
-    return data.searchForTerm.podcastSeries
-}
+  const data = await makeGQLRequest(query);
+  return data.searchForTerm.podcastSeries;
+};
