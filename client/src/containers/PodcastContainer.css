@@ -1,15 +1,21 @@
 .router{
     font-size: 100px;
     cursor: pointer;
+    border: black;
+    background: tar;
 }
 
 .active{
     color:greenyellow;
-    background-color: #fff;
+    background-color: greenyellow;
     font-size: 25px;
     appearance: none;
     background-color: transparent;
+<<<<<<< HEAD
     border: 0.125em solid black;
+=======
+    border: 0.300em solid black;
+>>>>>>> 73edb2ea6817bbbb6531570d8698d073b25bea52
     border-radius: 0.9375em;
     box-sizing: border-box;
     color: black;

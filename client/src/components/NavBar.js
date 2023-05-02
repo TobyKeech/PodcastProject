@@ -39,7 +39,10 @@ export const SidenavDiv = styled.div`
   padding-top: 10px;
 `;
 export const SidenavUl = styled.ul`
-  list-style: none;
+list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 `;
 export const SidenavLi = styled.li`
   color: black;
