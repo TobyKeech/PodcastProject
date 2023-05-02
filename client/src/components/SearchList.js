@@ -41,43 +41,40 @@ export default SearchList;
 
 const FilteredSearch = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  position: absolute;
+  top: 30px;
+  right: 15px;
 `;
-
 const SearchInput = styled.input`
   font-size: 1rem;
-  padding: 0.5rem;
-  border: 2px solid #ddd;
-  border-radius: 0.25rem;
-  margin-right: 0.5rem;
-  flex: 1;
+  padding: 0.5rem 1rem;
+  border: 1px solid black;
+  margin-right: 15px;
+  flex: 2px; /* increase the flex value */
 `;
-
 const SearchButton = styled.button`
   font-size: 1rem;
-  padding: 0.5rem 1rem;
-  background-color: #0077cc;
+  padding: 0.25rem 0.5rem; /* reduce the padding */
+  background-color: black;
   color: white;
   border: none;
-  border-radius: 0.25rem;
+  border-radius: 0rem; /* reduce the border-radius */
   cursor: pointer;
 `;
-
 const SearchResults = styled.div`
   margin-top: 1rem;
 `;
-
 const SearchResult = styled.div`
   margin-bottom: 1rem;
 `;
-
 const ResultTitle = styled.h3`
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
 `;
-
-const ResultImg = styled.img`
+const ResultDescription = styled.p`
   font-size: 1rem;
-  width: 150px;
-  height: 150px;
 `;
+
+const ResultImg = styled.img `
+`
