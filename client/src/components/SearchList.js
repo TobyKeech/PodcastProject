@@ -76,11 +76,5 @@ const ResultDescription = styled.p`
   font-size: 1rem;
 `;
 
-<<<<<<< HEAD
 const ResultImg = styled.img `
 `
-=======
-const ResultImg = styled.img`
-font-size: 1px;
-`;
->>>>>>> 73edb2ea6817bbbb6531570d8698d073b25bea52
